@@ -1,0 +1,30 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        transition: all 1s ease;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; //for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        .intro, .portfolio{
+            width: 100vw;
+            min-height: calc(100vh - 70px);;
+            scroll-snap-align: start;
+        }
+
+        .contact {
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
